@@ -1,11 +1,24 @@
 /*
 Author: Bootstrapthemes
-Author URI: http://bootstrapthemes.co
-*/
+Author URI: http://bootstrapthemes.co #223d61 #ff7300
+*/  
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html,
+   ::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #223d61 ; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff7300a2; 
+  }
+   html,
 body {
   background-color: #fff;
   font-size: 0.875rem;
@@ -17,6 +30,8 @@ body {
   font-weight: 400;
   width: 100%;
   font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+  transition-delay: 0;
 }
 .preloader {
   position: fixed;
@@ -533,11 +548,11 @@ input::-ms-input-placeholder {
   z-index: 300;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-color: rgba(34, 61, 97, 0.64);
+  background-color: rgba(34, 61, 97, 0.507);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  height: 75px;
+  height: 90px;
 }
 
 .main_menu_bg {
@@ -580,7 +595,8 @@ input::-ms-input-placeholder {
   padding: 0px 15px;
 }
 .navbar-brand > img {
-  width: 50px;
+  width: 65px;
+  filter: contrast(1)
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -634,11 +650,15 @@ input::-ms-input-placeholder {
 .head_title p {
   font-family: "playfair_displayregular";
 }
+.head_title + p{
+  font-size: 14px;
+  line-height: 2;
+}
 
 /*home section*/
 .home {
   background-blend-mode: linear;
-  background: url(../images/Vector_2640.jpg) no-repeat 100% 100%;
+  background: url(../images/BG_1500x900.jpg) no-repeat 100% 100%;
   background-size: cover;
 }
 

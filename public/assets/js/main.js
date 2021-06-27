@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
             if (target.length) {
                 $('html,body').animate({
                     scrollTop: (target.offset().top - 0)
-                }, 1000);
+                }, 10);
                 if ($('.navbar-toggle').css('display') != 'none') {
                     $(this).parents('.container').find(".navbar-toggle").trigger("click");
                 }
@@ -155,7 +155,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.scrollup').click(function () {
-        $("html, body").animate({scrollTop: 0}, 1000);
+        $("html, body").animate({scrollTop: 0}, 10);
         return false;
     });
 

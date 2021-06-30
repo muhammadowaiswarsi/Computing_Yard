@@ -206,13 +206,14 @@ async function postData(
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
+    // credentials: "same-origin", // include, *same-origin, omit
     headers: {
       "Content-Type": "application/json",
+      "x-api-key": "2byvweutuk5wkABXa71gs7Y4mcsDeVYw3DIdEPlD",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    // redirect: "follow", // manual, *follow, error
+    // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
   return response.json(); // parses JSON response into native JavaScript objects
@@ -220,6 +221,7 @@ async function postData(
 function getFormData(e) {
    // https://192.168.100.36:3002/msg
    // https://cy-attendance-server.herokuapp.com/msg
+   // https://d9pw3eu2qb.execute-api.us-east-1.amazonaws.com/default/CYContactUs
   e.preventDefault();
   const formData = new FormData(form);
   const data = {
@@ -239,13 +241,13 @@ function getFormData(e) {
     let messageText = data.message.replace(/\S+/g, "x");
     let noWords = messageText.replace(/x/g, "");
     let wordLength = messageText.length - noWords.length;
-  if(!(wordLength >= 10)){
-      return swal("Woah!","Please Enter minimum of 10 words in message.", "warning");
+  if(!(wordLength >= 1)){
+      return swal("Woah!","Please Enter minimum of 1 words in message.", "warning");
   }
   if(!(wordLength <= 150)){
     return swal("Woah!","Please Enter maximum of 150 words in message ", "warning");
 }
-  postData("https://cy-attendance-server.herokuapp.com/msg", data)
+  postData("https://d9pw3eu2qb.execute-api.us-east-1.amazonaws.com/default/CYContactUs", data)
     .then((e) =>
       { 
           swal(
@@ -255,6 +257,7 @@ function getFormData(e) {
       )}
     )
     .catch((e) => {
+      console.log(e)
         swal("Oops!", "Something Went Wrong!", "error")})
     .finally((e) => {
       document.querySelector("#firstname").value = null;

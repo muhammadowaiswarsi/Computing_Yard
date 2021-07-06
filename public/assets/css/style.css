@@ -52,7 +52,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url(../images/logo1_100x100.png);
+  background-image: url(../images/CYard.gif);
   background-repeat: no-repeat;
   animation: mymove 3s infinite;
   animation-direction: alternate;
@@ -60,16 +60,57 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   margin: -20px 0 0 -20px;
-  opacity: 0;
+
 }
 @keyframes mymove {
   from { 
-    opacity: 0;
+    
   }
   to { 
     opacity: 1;
     transform: scale(2);
   }
+}
+.myLoader {
+ width: 35px;
+ height: 35px;
+ background-image: url(../images/CYard.gif);
+ background-position: center;
+ background-repeat: no-repeat;
+ -moz-background-size: cover;
+ background-size: cover;
+ margin: -20px 0 0 -20px;
+ 
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#pageloader
+{
+  background: rgba( 255, 255, 255, 0.8 );
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#pageloader img
+{
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+  position: absolute;
+  top: 50%;
 }
 img {
   -moz-user-select: none;
@@ -798,21 +839,6 @@ input::-ms-input-placeholder {
 
 /*video section css*/
 
-.video {
-  background: url(../images/videobg.jpg) no-repeat top center;
-  background-size: cover;
-}
-.video .main_video {
-  padding: 220px 0px 160px 0px;
-  overflow: hidden;
-}
-.video .icon {
-}
-.video .icon h3 {
-  color: #fff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
 
 /*about section css*/
 .about {

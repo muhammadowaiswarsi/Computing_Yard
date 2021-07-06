@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
   /*---------------------------------------------*
      * Mobile menu
      ---------------------------------------------*/
+     
   $("#bs-example-navbar-collapse-1")
     .find("a[href*=#]:not([href=#])")
     .click(function () {
@@ -150,7 +151,11 @@ jQuery(document).ready(function ($) {
       jQuery(".navbar-fixed-top").removeClass("menu-scroll");
     }
   });
-
+  jQuery.event.special.touchstart = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+    }
+  };
   // scroll Up
 
   $(window).scroll(function () {
@@ -194,22 +199,25 @@ $(document).on("scroll", function () {
   }
 });
 
+
 const form = document.querySelector("#formid");
-const submitInput = form.querySelector('input[type="submit"]');
+const submitInput = form.querySelector('#submitBtn');
 
 async function postData(
   url = "https://cy-attendance-server.herokuapp.com/msg",
   data = {}
+  // 2byvweutuk5wkABXa71gs7Y4mcsDeVYw3DIdEPlD
 ) {
   // Default options are marked with *
   const response = await fetch(url, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    // mode: "cors", // no-cors, *cors, same-origin
+    // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
     // credentials: "same-origin", // include, *same-origin, omit
     headers: {
       "Content-Type": "application/json",
       "x-api-key": "2byvweutuk5wkABXa71gs7Y4mcsDeVYw3DIdEPlD",
+      // "Access-Control-Allow-Origin": "*"
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     // redirect: "follow", // manual, *follow, error
@@ -222,7 +230,13 @@ function getFormData(e) {
    // https://192.168.100.36:3002/msg
    // https://cy-attendance-server.herokuapp.com/msg
    // https://d9pw3eu2qb.execute-api.us-east-1.amazonaws.com/default/CYContactUs
+   // https://tzpbrbutie.execute-api.us-east-1.amazonaws.com/dev/cyemail
   e.preventDefault();
+  const button = document.querySelector('#submitBtn');
+  
+  button.disabled = true;
+  button.innerHTML = `<img src="/assets/images/Logo-cmplete.gif" height="32" width="32" />`;
+
   const formData = new FormData(form);
   const data = {
     firstName: formData.get("firstName") ?  formData.get("firstName") : "",
@@ -233,38 +247,51 @@ function getFormData(e) {
   };
 
   if(!(data.firstName && data.lastName && data.email && data.subject && data.message)){
+    button.disabled = false;
+    button.innerHTML = "Submit";
       return swal("Woah!","Please fill the details", "warning");
+      
   }
   if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.email))){
+    button.disabled = false;
+    button.innerHTML = "Submit";
       return swal("Woah!","Please enter a valid email address", "warning");
   }
     let messageText = data.message.replace(/\S+/g, "x");
     let noWords = messageText.replace(/x/g, "");
     let wordLength = messageText.length - noWords.length;
   if(!(wordLength >= 1)){
+    button.disabled = false;
+    button.innerHTML = "Submit";
       return swal("Woah!","Please Enter minimum of 1 words in message.", "warning");
   }
   if(!(wordLength <= 150)){
+    button.disabled = false;
+    button.innerHTML = "Submit";
     return swal("Woah!","Please Enter maximum of 150 words in message ", "warning");
 }
-  postData("https://d9pw3eu2qb.execute-api.us-east-1.amazonaws.com/default/CYContactUs", data)
+
+  postData("https://tzpbrbutie.execute-api.us-east-1.amazonaws.com/dev/cyemail", data)
     .then((e) =>
       { 
           swal(
         "Thank You!",
         "We have received your response, we will contact you as soon as possible!",
         "success"
-      )}
-    )
-    .catch((e) => {
-      console.log(e)
-        swal("Oops!", "Something Went Wrong!", "error")})
-    .finally((e) => {
+      );
       document.querySelector("#firstname").value = null;
       document.querySelector("#lastname").value = null;
       document.querySelector("#email").value = null;
       document.querySelector("#subject").value = null;
       document.querySelector("#message").value = null;
+    }
+    )
+    .catch((e) => {
+      console.log(e);
+        swal("Oops!", "Something Went Wrong!", "error")})
+    .finally((e) => {
+     button.disabled = false;
+     button.innerHTML = "Submit";
     });
 }
 document.addEventListener("DOMContentLoaded", function () {

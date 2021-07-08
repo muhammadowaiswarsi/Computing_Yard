@@ -235,7 +235,7 @@ function getFormData(e) {
   const button = document.querySelector('#submitBtn');
   
   button.disabled = true;
-  button.innerHTML = `<img src="/assets/images/Logo-cmplete.gif" height="32" width="32" />`;
+  button.innerHTML = `<div class="loaderParent"><div class="myloader">&nbsp;</div></div>`;
 
   const formData = new FormData(form);
   const data = {

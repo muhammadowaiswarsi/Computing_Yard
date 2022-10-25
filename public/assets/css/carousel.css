@@ -1,0 +1,117 @@
+#carousel-main {
+  position: relative;
+  min-width: 100%;
+  margin-bottom: 100px;
+  padding: 5px 0;
+}
+#carousel-flip {
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+  scroll-behavior: smooth;
+  /* border: 1px solid #f4720a; */
+  /* box-shadow: rgba(235, 232, 232, 0.35) 0px 1px 10px; */
+  /* border-bottom: 1px solid #f4720a; */
+}
+#carousel-flip::-webkit-scrollbar {
+  display: none;
+}
+.image-div {
+  min-width: 328px;
+  max-width: 328px;
+  height: 224px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1;
+  box-shadow: rgba(235, 232, 232, 0.253) 0px 1px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px; */
+}
+.project-images {
+  width: auto;
+  max-width: 165px;
+  height: auto;
+  max-height: 75px;
+  object-fit: contain;
+  box-shadow: rgba(235, 232, 232, 0.253) 0px 1px 10px;
+  z-index: 0;
+}
+
+.carousel-buttons {
+  position: absolute;
+  height: 35px;
+  top: calc((100% - 35px) / 2);
+  left: -17.5px;
+  width: calc(100% + 35px);
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #f4720a;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+  background-color: #fff;
+  z-index: 2;
+}
+.review-main {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 90px;
+  display: flex;
+  align-items: center;
+}
+#reviewer-img {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+.review-details {
+  flex-grow: 1;
+}
+#review-message {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f5f8fa;
+  /* background-color: #f4730a24; */
+  color: #000;
+  padding: 16px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  /* box-shadow: rgba(0, 0, 0, 0.363) 0px 5px 15px 0px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+#reviewer-name {
+  font-size: 16px;
+  color: #000;
+  padding-left: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#reviewer-designation {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding-left: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#reviewer-company {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 16px;
+  font-style: oblique;
+}

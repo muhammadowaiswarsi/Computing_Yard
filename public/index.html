@@ -23,10 +23,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet preconnect"  lazyload>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet preconnect"  lazyload>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link  rel="stylesheet" href="assets/css/font-awesome.min.css" lazyload>
     <link  rel="stylesheet" href="assets/css/bootstrap.min.css"  lazyload>
     <link  rel="stylesheet" href="assets/css/magnific-popup.css">
-
+    <link rel="stylesheet" href="assets/css/carousel.css">
 
     <!--For Plugins external css-->
     <link  rel="stylesheet" href="assets/css/plugins.min.css" lazyload  />
@@ -78,6 +79,10 @@
                                             <li><a href="#about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>|
                                             <li><a href="#choose"><i class="fa fa-bookmark" aria-hidden="true"></i> Why Choose us</a></li>
                                             <li><a href="#contact"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
+                                            <li><a href="#projects"><i class="fa fa-regular fa-folder-open" aria-hidden="true"></i> Projects</a></li>
+                                            <li><a href="#reviews"><i class="fa-regular fa-comment" aria-hidden="true"></i> Reviews</a></li>
+                                            
+                                       
                                         </ul>
 
 
@@ -1212,9 +1217,56 @@
                         </div>
                     </div>
                 </div>
-        </section> <!-- End of contact section -->
-
-
+        </section>
+        <section id="projects">
+            <div class="container">
+                <div class="head_title">
+                    <h3>SUCCESS PROJECTS</h3>
+                    <div class="separator"></div>
+                </div>
+                <div id="carousel-main">
+                    <div class="carousel-buttons">
+                        <div class="carousel-button" onclick="handleScroll(false)"><i class="fa-solid fa-angle-left"></i></div>
+                        <div class="carousel-button" onclick="handleScroll(true)"><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                <div id="carousel-flip">
+                 <a target="_blank" href="https://www.truck-body.com" class="image-div"><img src="assets/images/projects/ami.png"  class="project-images"alt=""/></a>
+                 <a target="_blank" href="https://paylinkz.app" class="image-div"><img src="assets/images/projects/paylinkz.png"  class="project-images"alt=""/></a>
+                 <a target="_blank" href="https://app.laetus-store.com" class="image-div"><img src="assets/images/projects/leatus.png"  class="project-images"alt=""/></a>
+                 <a target="_blank" href="https://tikrbuddy.com" class="image-div"><img src="assets/images/projects/tikrbuddy.png"  class="project-images"alt=""/></a>
+                 <a target="_blank" href="https://service.dasmachwerk.com" class="image-div"><img src="assets/images/projects/dasmachwerk.png"  class="project-images"alt=""/></a>
+                </div>
+                </div>
+            </div>
+        </section> 
+        <section id="reviews">
+            <div class="container">
+                <div class="head_title">
+                    <h3>Clients Reviews</h3>
+                    <!-- <div class="separator"></div> -->
+                </div>
+                <div id="carousel-main">
+                    <div class="carousel-buttons">
+                        <div class="carousel-button" onclick="handleScroll(false)"><i class="fa-solid fa-angle-left"></i></div>
+                        <div class="carousel-button" onclick="handleScroll(true)"><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                <!-- <div id="reviews-flip"> -->
+                 <div class="review-main">
+                    <img src="assets/images/clients/client1.jpg" id="reviewer-img" alt="">
+                    <div class="review-details">
+                        <div id="review-message">
+Lorem ipsum dolor sit amet consectetur adipisicin omnis impedit consectetur eaque voluptates, nobis illo sequi odio sed consequatur vero ullam mollitia milique, ratione totam. Sed repellendus assumenda provident. Obcaecati, commodi dolore!
+                        </div>
+                        <div id="reviewer-name">Wasu Trivedi</div>
+                        <div id="reviewer-designation">CTO</div>
+                        <div id="reviewer-company">Computing Yard</div>
+                    </div>
+                 </div>
+                <!-- </div> -->
+                </div>
+            </div>
+        </section> 
+        <!-- End of Reviews section -->
 
         <section id="maps" class="maps" style="display: none">
             <div class="map-overlay">
@@ -1332,6 +1384,6 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script src="assets/js/app.js"></script>
 </body>
-
 </html>

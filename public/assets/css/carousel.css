@@ -62,7 +62,7 @@
   background-color: #fff;
   z-index: 2;
 }
-.review-main {
+#review-main {
   width: 100%;
   min-height: 300px;
   padding: 20px 90px;

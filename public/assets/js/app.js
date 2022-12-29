@@ -7,7 +7,7 @@ let reviews = [
     designation: "CTO",
     company: "Computing Yard",
     message:
-      "Lorem Wasu ipsum dolor sit amet consectetur adipisicin omnis impedit consectetur eaque voluptates, nobis illo sequi odio sed consequatur vero ullam mollitia milique, ratione totam. Sed repellendus assumenda provident. Obcaecati, commodi dolore!",
+      "Adarniya sabhapati mahodaya Atithi vishesh, Shikshan mantri shri R D tripati [tripathi] ji Maanyaniya shikshagan aur mere piyaaare sahpatiyo [sahapathiyon] Aaj agar I.C.E aasmaan ki bulaaandiyo [bulandiyon] ko chhu raahaa [raha] hai...",
     image: "assets/images/clients/client1.jpg",
   },
   {
@@ -62,8 +62,8 @@ const handleReviewScroll = (isNext) => {
   const reviewDesignation = document.getElementById("reviewer-designation");
   const reviewCompany = document.getElementById("reviewer-company");
   const getKey = isNext
-    ? Number(reviewMain.accessKey) + 1
-    : Number(reviewMain.accessKey) - 1;
+    ? Number(reviewMain?.accessKey) + 1
+    : Number(reviewMain?.accessKey) - 1;
 
   const review = !getKey
     ? reviews[reviews?.length - 1]

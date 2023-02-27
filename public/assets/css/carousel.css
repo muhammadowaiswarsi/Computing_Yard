@@ -38,7 +38,10 @@
   box-shadow: rgba(235, 232, 232, 0.253) 0px 1px 10px;
   z-index: 0;
 }
-
+.carousel-container {
+  padding-left: 18px;
+  padding-right: 18px;
+}
 .carousel-buttons {
   position: absolute;
   height: 35px;

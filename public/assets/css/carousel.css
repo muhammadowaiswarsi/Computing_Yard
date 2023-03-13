@@ -1,7 +1,7 @@
 #carousel-main {
   position: relative;
   min-width: 100%;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   padding: 5px 0;
 }
 #carousel-flip {
@@ -112,7 +112,9 @@
   padding-left: 16px;
   font-style: oblique;
 }
-
+.projects-title {
+  margin-bottom: 0px;
+}
 @media only screen and (max-width: 1024px) {
   .image-div {
     min-width: 50%;

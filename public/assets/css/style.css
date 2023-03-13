@@ -796,8 +796,8 @@ input::-ms-input-placeholder {
   border: 0px;
   transition: all 0.6s;
 }
-.service_tabe_menu.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.service_tabe_menu.nav-tabs > li.active > a.active,
+.nav-tabs > li.active > a.active {
   background: url(../images/stabmenubghv.png) no-repeat top center;
   width: 250px;
   height: 180px;

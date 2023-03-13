@@ -131,12 +131,6 @@
                           >
                         </li>
                         <li>
-                          <a href="#contact"
-                            ><i class="fa fa-phone" aria-hidden="true"></i>
-                            Contact</a
-                          >
-                        </li>
-                        <li>
                           <a href="#projects"
                             ><i
                               class="fa fa-regular fa-folder-open"
@@ -145,6 +139,13 @@
                             Projects</a
                           >
                         </li>
+                        <li>
+                          <a href="#contact"
+                            ><i class="fa fa-phone" aria-hidden="true"></i>
+                            Contact</a
+                          >
+                        </li>
+
                         <!-- <li><a href="#reviews"><i class="fa-regular fa-comment" aria-hidden="true"></i> Reviews</a></li> -->
                       </ul>
                     </div>
@@ -217,42 +218,47 @@
                   <div class="service_tabe">
                     <!-- Nav tabs -->
                     <ul class="service_tabe_menu nav nav-tabs" role="tablist">
-                      <li role="presentation" class="active">
+                      <li role="presentation" class="services active">
                         <a
                           href="#webdesign"
                           aria-controls="webdesign"
                           role="tab"
                           data-toggle="tab"
+                          onclick="revokeServiceToggle(0)"
+                          class="active"
                           ><i class="fa fa-map-marker"></i> <br />WEB
                           DEVELOPMENT</a
                         >
                       </li>
-                      <li role="presentation">
+                      <li role="presentation" class="services">
                         <a
                           href="#appdesign"
                           aria-controls="appdesign"
                           role="tab"
                           data-toggle="tab"
+                          onclick="revokeServiceToggle(1)"
                           ><i class="fa fa-map-marker"></i> <br />MOBILE APP
                           DEVELOPMENT</a
                         >
                       </li>
-                      <li role="presentation">
+                      <li role="presentation" class="services">
                         <a
                           href="#graphicdesign"
                           aria-controls="graphicdesign"
                           role="tab"
                           data-toggle="tab"
+                          onclick="revokeServiceToggle(2)"
                           ><i class="fa fa-map-marker"></i> <br />CHATBOT
                           DEVELOPMENT</a
                         >
                       </li>
-                      <li role="presentation">
+                      <li role="presentation" class="services">
                         <a
                           href="#gamedesign"
                           aria-controls="gamedesign"
                           role="tab"
                           data-toggle="tab"
+                          onclick="revokeServiceToggle(3)"
                           ><i class="fa fa-map-marker"></i> <br />INTERNET OF
                           THINGS</a
                         >
@@ -263,7 +269,7 @@
                     <div class="tab-content">
                       <div
                         role="tabpanel"
-                        class="tab-pane active"
+                        class="tab-pane service-tabs-data active"
                         id="webdesign"
                       >
                         <div class="single_service_tab">
@@ -299,7 +305,11 @@
                           </div>
                         </div>
                       </div>
-                      <div role="tabpanel" class="tab-pane" id="appdesign">
+                      <div
+                        role="tabpanel"
+                        class="tab-pane service-tabs-data"
+                        id="appdesign"
+                      >
                         <div class="single_service_tab">
                           <div class="row">
                             <div class="col-sm-6">
@@ -332,7 +342,11 @@
                           </div>
                         </div>
                       </div>
-                      <div role="tabpanel" class="tab-pane" id="graphicdesign">
+                      <div
+                        role="tabpanel"
+                        class="tab-pane service-tabs-data"
+                        id="graphicdesign"
+                      >
                         <div class="single_service_tab">
                           <div class="row">
                             <div class="col-sm-6">
@@ -368,7 +382,11 @@
                           </div>
                         </div>
                       </div>
-                      <div role="tabpanel" class="tab-pane" id="gamedesign">
+                      <div
+                        role="tabpanel"
+                        class="tab-pane service-tabs-data"
+                        id="gamedesign"
+                      >
                         <div class="single_service_tab">
                           <div class="row">
                             <div class="col-sm-6">
@@ -1454,6 +1472,73 @@
           </div>
         </div>
       </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="head_title projects-title">
+            <h3>SUCCESS PROJECTS</h3>
+            <div class="separator"></div>
+          </div>
+          <div class="carousel-container">
+            <div id="carousel-main">
+              <div class="carousel-buttons">
+                <div class="carousel-button" onclick="handleScroll(false)">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="carousel-button" onclick="handleScroll(true)">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
+
+              <div id="carousel-flip">
+                <a
+                  target="_blank"
+                  href="https://www.truck-body.com"
+                  class="image-div"
+                  ><img
+                    src="assets/images/projects/ami.png"
+                    class="project-images"
+                    alt=""
+                /></a>
+                <a target="_blank" href="https://paylinkz.app" class="image-div"
+                  ><img
+                    src="assets/images/projects/paylinkz.png"
+                    class="project-images"
+                    alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://app.laetus-store.com"
+                  class="image-div"
+                  ><img
+                    src="assets/images/projects/leatus.png"
+                    class="project-images"
+                    alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://tikrbuddy.com"
+                  class="image-div"
+                  ><img
+                    src="assets/images/projects/tikrbuddy.png"
+                    class="project-images"
+                    alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://service.dasmachwerk.com"
+                  class="image-div"
+                  ><img
+                    src="assets/images/projects/dasmachwerk.png"
+                    class="project-images"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="contact">
         <div class="container">
           <div class="row">
@@ -1572,72 +1657,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="container">
-          <div class="head_title">
-            <h3>SUCCESS PROJECTS</h3>
-            <div class="separator"></div>
-          </div>
-          <div class="carousel-container">
-            <div id="carousel-main">
-              <div class="carousel-buttons">
-                <div class="carousel-button" onclick="handleScroll(false)">
-                  <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="carousel-button" onclick="handleScroll(true)">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-              </div>
-
-              <div id="carousel-flip">
-                <a
-                  target="_blank"
-                  href="https://www.truck-body.com"
-                  class="image-div"
-                  ><img
-                    src="assets/images/projects/ami.png"
-                    class="project-images"
-                    alt=""
-                /></a>
-                <a target="_blank" href="https://paylinkz.app" class="image-div"
-                  ><img
-                    src="assets/images/projects/paylinkz.png"
-                    class="project-images"
-                    alt=""
-                /></a>
-                <a
-                  target="_blank"
-                  href="https://app.laetus-store.com"
-                  class="image-div"
-                  ><img
-                    src="assets/images/projects/leatus.png"
-                    class="project-images"
-                    alt=""
-                /></a>
-                <a
-                  target="_blank"
-                  href="https://tikrbuddy.com"
-                  class="image-div"
-                  ><img
-                    src="assets/images/projects/tikrbuddy.png"
-                    class="project-images"
-                    alt=""
-                /></a>
-                <a
-                  target="_blank"
-                  href="https://service.dasmachwerk.com"
-                  class="image-div"
-                  ><img
-                    src="assets/images/projects/dasmachwerk.png"
-                    class="project-images"
-                    alt=""
-                /></a>
               </div>
             </div>
           </div>
@@ -1803,6 +1822,7 @@
       defer
     ></script>
     <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/services.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
     <script src="assets/js/jquery.mixitup.min.js"></script>
     <script src="assets/js/jquery.easing.1.3.js"></script>

@@ -671,7 +671,7 @@ input::-ms-input-placeholder {
 .nav-tabs > li.active > a:focus,
 .service_tabe_menu.nav-tabs > li.active > a.active {
   background: url(../images/stabmenubghv.png) no-repeat top center;
-  width: 250px;
+  /* width: 250px; */
   height: 180px;
   color: #fff;
 }

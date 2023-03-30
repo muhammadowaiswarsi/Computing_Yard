@@ -964,16 +964,25 @@ input::-ms-input-placeholder {
   text-align: center;
   transition: 0.6s;
 }
+
 .choose
   .main_choose
   .single_choose
   .single_choose_acording
   .panel-title:hover
   a
-  i {
+  i,
+.choose
+  .main_choose
+  .single_choose
+  .single_choose_acording
+  .panel-title
+  a
+  i.active {
   color: #fff;
   background: url(../images/ch_col_icn_h.png) no-repeat left center;
 }
+
 .choose
   .main_choose
   .single_choose

@@ -1,3 +1,18 @@
+const toggleNavbar = () =>
+  document.getElementById("navbar-toggle-button").click();
+
+const whyChooseClassToggle = (index) => {
+  const elements = document.querySelectorAll(".why-choose-us");
+  elements.forEach((element, i) => {
+    const hello = element.classList.value.includes("active");
+    if (i !== index || (i === index && hello)) {
+      element.classList.remove("active");
+    } else {
+      element.classList.add("active");
+    }
+  });
+};
+
 // let scrollingWidth = 0;
 
 // let reviews = [

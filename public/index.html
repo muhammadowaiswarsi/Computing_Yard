@@ -74,6 +74,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                       <button
+                        id="navbar-toggle-button"
                         type="button"
                         class="navbar-toggle collapsed"
                         data-toggle="collapse"
@@ -103,10 +104,12 @@
                     >
                       <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="#home"><i class="fa fa-home"></i> Home</a>
+                          <a onclick="toggleNavbar()" href="#home"
+                            ><i class="fa fa-home"></i> Home</a
+                          >
                         </li>
                         <li>
-                          <a href="#service"
+                          <a onclick="toggleNavbar()" href="#service"
                             ><i
                               class="fa fa-paper-plane"
                               aria-hidden="true"
@@ -115,7 +118,7 @@
                           >
                         </li>
                         <li>
-                          <a href="#about"
+                          <a onclick="toggleNavbar()" href="#about"
                             ><i
                               class="fa fa-info-circle"
                               aria-hidden="true"
@@ -124,13 +127,13 @@
                           >
                         </li>
                         <li>
-                          <a href="#choose"
+                          <a onclick="toggleNavbar()" href="#choose"
                             ><i class="fa fa-bookmark" aria-hidden="true"></i>
                             Why Choose us</a
                           >
                         </li>
                         <li>
-                          <a href="#projects"
+                          <a onclick="toggleNavbar()" href="#projects"
                             ><i
                               class="fa fa-regular fa-folder-open"
                               aria-hidden="true"
@@ -139,13 +142,15 @@
                           >
                         </li>
                         <li>
-                          <a href="#contact"
+                          <a onclick="toggleNavbar()" href="#contact"
                             ><i class="fa fa-phone" aria-hidden="true"></i>
                             Contact</a
                           >
                         </li>
 
-                        <!-- <li><a href="#reviews"><i class="fa-regular fa-comment" aria-hidden="true"></i> Reviews</a></li> -->
+                        <!-- <li><a 
+                          onclick="toggleNavbar()"
+                          href="#reviews"><i class="fa-regular fa-comment" aria-hidden="true"></i> Reviews</a></li> -->
                       </ul>
                     </div>
                   </div>
@@ -975,7 +980,10 @@
                       role="tablist"
                       aria-multiselectable="true"
                     >
-                      <div class="panel panel-default">
+                      <div
+                        class="panel panel-default"
+                        onclick="whyChooseClassToggle(0)"
+                      >
                         <div class="panel-heading" role="tab" id="headingOne">
                           <h4 class="panel-title">
                             <a
@@ -987,8 +995,10 @@
                               aria-controls="collapseOne"
                               class="collapsed"
                             >
-                              <i class="fa fa-picture-o"></i> ATTENTION TO
-                              DETAILS
+                              <i
+                                class="why-choose-us fa fa-picture-o active"
+                              ></i>
+                              ATTENTION TO DETAILS
                             </a>
                           </h4>
                         </div>
@@ -1008,7 +1018,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="panel panel-default">
+                      <div
+                        class="panel panel-default"
+                        onclick="whyChooseClassToggle(1)"
+                      >
                         <div class="panel-heading" role="tab" id="headingTwo">
                           <h4 class="panel-title">
                             <a
@@ -1020,8 +1033,8 @@
                               aria-expanded="false"
                               aria-controls="collapseTwo"
                             >
-                              <i class="fa fa-map-signs"></i> PLAN FOR
-                              SUCCESS</a
+                              <i class="why-choose-us fa fa-map-signs"></i> PLAN
+                              FOR SUCCESS</a
                             >
                           </h4>
                         </div>
@@ -1038,7 +1051,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="panel panel-default">
+                      <div
+                        class="panel panel-default"
+                        onclick="whyChooseClassToggle(2)"
+                      >
                         <div class="panel-heading" role="tab" id="headingThree">
                           <h4 class="panel-title">
                             <a
@@ -1050,7 +1066,8 @@
                               aria-expanded="false"
                               aria-controls="collapseThree"
                             >
-                              <i class="fa fa-bullseye"></i> CREATIVITY
+                              <i class="why-choose-us fa fa-bullseye"></i>
+                              CREATIVITY
                             </a>
                           </h4>
                         </div>
@@ -1072,7 +1089,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="panel panel-default">
+                      <div
+                        class="panel panel-default"
+                        onclick="whyChooseClassToggle(3)"
+                      >
                         <div class="panel-heading" role="tab" id="headingThree">
                           <h4 class="panel-title">
                             <a
@@ -1084,7 +1104,8 @@
                               aria-expanded="false"
                               aria-controls="collapseThree"
                             >
-                              <i class="fa fa-umbrella"></i>PUNCTUALITY
+                              <i class="why-choose-us fa fa-umbrella"></i
+                              >PUNCTUALITY
                             </a>
                           </h4>
                         </div>
@@ -1103,7 +1124,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="panel panel-default">
+                      <div
+                        class="panel panel-default"
+                        onclick="whyChooseClassToggle(4)"
+                      >
                         <div class="panel-heading" role="tab" id="headingThree">
                           <h4 class="panel-title">
                             <a
@@ -1115,7 +1139,7 @@
                               aria-expanded="false"
                               aria-controls="collapseThree"
                             >
-                              <i class="fa fa-subway"></i>PRICING
+                              <i class="why-choose-us fa fa-subway"></i>PRICING
                             </a>
                           </h4>
                         </div>

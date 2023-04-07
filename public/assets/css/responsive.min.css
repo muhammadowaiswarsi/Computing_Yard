@@ -10,9 +10,9 @@
   .service_tabe_menu.nav-tabs > li.active > a:hover {
     width: 195px;
   }
-  /* .about .single_about .single_ab_text {
+  .about .single_about .single_ab_text {
     margin-left: 50px;
-  } */
+  }
   .team
     .single_team_content
     .single_team_text_overlay
@@ -245,6 +245,10 @@
     color: #000;
     font-size: 12px;
   }
+
+  .about .single_about .single_ab_text {
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -254,6 +258,12 @@
   .service .nav-tabs > li > a {
     width: 98%;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .about .single_about .single_ab_text {
+    margin-left: 50px;
   }
 }
 
@@ -303,6 +313,9 @@
   .single_about_left_img > img {
     width: 85vw;
     margin-top: -100px;
+  }
+  .about .single_about .single_ab_text {
+    margin-left: 0px;
   }
 }
 @media (max-width: 320px) {

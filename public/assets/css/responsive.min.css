@@ -255,6 +255,8 @@
   .service .nav-tabs > li {
     width: 50%;
   }
+  .service .nav-tabs > li > a.active,
+  .service .nav-tabs > li > a.active:hover,
   .service .nav-tabs > li > a {
     width: 98%;
     font-size: 1rem;
